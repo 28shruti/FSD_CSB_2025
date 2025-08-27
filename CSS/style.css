@@ -1,0 +1,23 @@
+/* body{
+    background-color: blueviolet;
+} */
+
+ /* p{
+    background-color: rgb(94, 255, 0);
+    color: rgb(62, 16, 231);
+} */
+/*h2{
+    font-family: 'Courier New', Courier, monospace;
+    color: rgb(25, 168, 179);
+}*/
+#home{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: rgb(99, 99, 8);
+    background-color: yellow;
+}
+
+.footer{
+    background-color: blueviolet;
+    color: antiquewhite;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
