@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Two Column Layout</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+    header {
+      background: #03142b;
+      color: white;
+      padding: 15px;
+      text-align: center;
+    }
+    main {
+      display: flex;
+      min-height: 80vh;
+    }
+    .left {
+      width: 25%;
+      background: #f0f0f0;
+      padding: 15px;
+    }
+    .left button {
+      display: block;
+      width: 100%;
+      margin-bottom: 10px;
+      padding: 10px;
+      border: none;
+      background: #ddd;
+      cursor: pointer;
+      text-align: left;
+    }
+    .left button:hover {
+      background: #bbb;
+    }
+    .right {
+      flex: 1;
+      padding: 15px;
+      background: #fff;
+      border-left: 1px solid #ccc;
+    }
+    footer {
+      background: #5c5959;
+      color: white;
+      text-align: center;
+      padding: 10px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Header</h1>
+  </header>
+
+  <main>
+    <div class="left">
+      <button onclick="showContent('java')">Java</button>
+      <button onclick="showContent('c')">C</button>
+      <button onclick="showContent('python')">Python</button>
+    </div>
+    <div class="right" id="content">
+      <h2>Welcome</h2>
+      <p>Click a language on the left to see its details here.</p>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2025 My Website</p>
+  </footer>
+
+  <script>
+    function showContent(lang) {
+      let content = document.getElementById("content");
+      if (lang === "java") {
+        content.innerHTML = "<h2>Java</h2><p>Java is used for backend, Android apps, and enterprise software.</p>";
+      } else if (lang === "c") {
+        content.innerHTML = "<h2>C</h2><p>C is a low-level programming language used in system programming.</p>";
+      } else if (lang === "python") {
+        content.innerHTML = "<h2>Python</h2><p>Python is popular for data science, AI, and web development.</p>";
+      }
+    }
+  </script>
+</body>
+</html>
+
+
+
+<!-- no css use -->

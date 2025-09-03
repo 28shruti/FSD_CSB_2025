@@ -21,3 +21,53 @@
     color: antiquewhite;
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
+/* descendent */
+/* div p{
+    background-color: blueviolet;
+    color: azure;
+} */
+
+/* it means we are talking about div child */
+/* div>p{
+    background-color: blueviolet;
+    color: azure;
+} */
+
+/* only 1 pr impact pdega */
+/* div+p{
+    background-color: blueviolet;
+    color: azure;
+} */
+
+/* both p pr impact pdega */
+div~p{
+    background-color: blueviolet;
+    color: azure;
+}
+/* 
+p:hover{
+    font-size: xx-large;
+    background-color: aqua;
+} */
+
+p::after{
+    content:"ABES Engineering College";
+    background-color: rgb(128, 4, 128);
+    color:white;
+}
+p::before{
+    contain: "We are the student of third year CS B";
+    background-color: cadetblue;
+    color: blanchedalmond;
+}
+p::selection{
+    background-color: greenyellow;
+}
+p:nth-child(2){
+    background-color: blue;
+    color: aqua;
+}
+div p:nth-of-type(1){
+    background-color: rgb(47, 129, 102);
+    color: black;
+}
