@@ -1,0 +1,35 @@
+/* body{
+    background-color: lightpink;
+} */
+.parent{
+    display: flex;
+    background-color: lawngreen;
+    border: 1px solid red;
+    flex-direction: row;
+    justify-content: space-between;
+    /* flex-wrap: nowrap; */
+}
+.child1{
+    height: 200px;
+    width: 200px;
+    background-color: aqua;
+    border: 2px dotted blue;
+}
+.child2{
+    height: 200px;
+    width: 200px;
+    background-color: rgb(176, 113, 235);
+    border: 2px dotted purple;
+}
+.child3{
+    height: 200px;
+    width: 200px;
+    background-color: rgb(113, 166, 235);
+    border: 2px dotted rgb(128, 0, 17);
+}
+.child4{
+    height: 200px;
+    width: 200px;
+    background-color: rgb(197, 72, 14);
+    border: 2px dotted rgb(232, 235, 63);
+}
