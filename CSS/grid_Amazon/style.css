@@ -6,7 +6,7 @@
 {
     display: grid;
     grid-template-columns: repeat(4,1fr);
-    grid-template-rows: 100px 400px 200px;
+    grid-template-rows: 100px 70px 400px 200px;
     background-color: blueviolet;
     border: 1px solid black;
 }
@@ -16,60 +16,207 @@
     grid-column-end: 5;
     grid-row-start: 1;
     grid-row-end: 2;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
     background-color: black;
-    border: 1px solid white;
+    /* border: 1px solid white; */
     color: white;
 }
-
+.subheader{
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    /* border: 1px solid white; */
+    background-color: #232F3E;
+    display: flex;
+    color: white;
+    justify-content: space-evenly;
+    max-height: 39px;
+    align-items: center;
+}
 .container1
 {
     display: grid;
     grid-template-columns: repeat(2,1fr);
-    grid-template-rows: repeat(2,1fr);
-    background-color: aquamarine;
+    /* grid-template-rows: repeat(2,1fr); */
+    background-color: white;
     border: 1px solid red;
+    flex-wrap: wrap;
     
+}
+.cont11{
+    margin-left: 20px;
+}
+.cont12{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(2,1fr);
+    background-color: white;
+    /* border: 1px solid red; */
 }
 .container11
 {
-background-color: brown;
-height: 100px;
-width: 100px;
+background: url("https://images-eu.ssl-images-amazon.com/images/G/31/IMG20/Home/2024/Gateway/BTFGW/PCQC/New/1x/final/186x116_Home_furnishings_2._SY116_CB555624324_.jpg") no-repeat;
+height: 120px;
+width: 120px;
 margin-top: 20px;
-margin-right: 20px;
+margin-left: 20px;
 }
 .container12
 {
-background-color: aqua;
-height: 100px;
-width: 100px;
+background: url("https://images-eu.ssl-images-amazon.com/images/G/31/IMG20/Home/2024/Gateway/BTFGW/PCQC/New/1x/final/186x116_Home_decor_1._SY116_CB555624324_.jpg")no-repeat;
+height: 120px;
+width: 120px;
 margin-top: 20px;
 margin-left: 20px;
 }
 .container13
 {
-background-color: crimson;
-height: 100px;
-width: 100px;
+background: url("https://images-eu.ssl-images-amazon.com/images/G/31/IMG20/Home/2024/Gateway/BTFGW/PCQC/New/1x/final/186x116_Home_storage_1._SY116_CB555624324_.jpg") no-repeat;
+height: 120px;
+width: 120px;
+margin-left: 20px;
+
 }
 .container14
 {
-background-color: blue;
-height: 100px;
-width: 100px;
+background: url("https://images-eu.ssl-images-amazon.com/images/G/31/IMG20/Home/2024/Gateway/BTFGW/PCQC/New/1x/final/186x116_Home_lighting_2._SY116_CB555624324_.jpg") no-repeat;
+height: 120px;
+width: 120px;
+margin-left: 20px;
+
 }
 .container2
 {
-    background-color: burlywood;
-    border: 1px solid black;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(2,1fr);
+    background-color: white;
+    border: 1px solid red;
+}n b b
+.container21
+{
+background: url("https://images-eu.ssl-images-amazon.com/images/G/31/IMG15/Irfan/GATEWAY/MSO/Appliances-QC-PC-186x116--B08RDL6H79._SY116_CB667322346_.jpg") no-repeat;
+height: 120px;
+width: 120px;
+margin-top: 20px;
+margin-left: 20px;
 }
+.container22
+{
+background: url("https://images-eu.ssl-images-amazon.com/images/G/31/IMG15/Irfan/GATEWAY/MSO/Appliances-QC-PC-186x116--B08345R1ZW._SY116_CB667322346_.jpg") no-repeat;
+height: 120px;
+width: 120px;
+margin-top: 20px;
+margin-left: 20px;
+}
+.container23
+{
+background: url("https://images-eu.ssl-images-amazon.com/images/G/31/IMG15/Irfan/GATEWAY/MSO/Appliances-QC-PC-186x116--B07G5J5FYP._SY116_CB667322346_.jpg") no-repeat;
+height: 120px;
+width: 120px;
+margin-left: 20px;
+
+}
+.container24
+{
+background: url("https://images-eu.ssl-images-amazon.com/images/G/31/IMG15/Irfan/GATEWAY/MSO/186x116---wm._SY116_CB667322346_.jpg") no-repeat;
+height: 120px;
+width: 120px;
+margin-left: 20px;
+
+}
+
 .container3
 {
-    background-color: orange;
-    border: 1px solid greenyellow;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(2,1fr);
+    background-color: white;
+    border: 1px solid red;
 }
+.container31
+{
+background: url("https://images-eu.ssl-images-amazon.com/images/G/31/img21/june/CE/GW/QC/PC/PC_QuadCard_boAt_0.5x._SY116_CB553870684_.jpg") no-repeat;
+height: 120px;
+width: 120px;
+margin-top: 20px;
+margin-left: 20px;
+}
+.container32
+{
+background: url("https://images-eu.ssl-images-amazon.com/images/G/31/img21/june/CE/GW/QC/PC/PC_QuadCard_Boult_0.5x._SY116_CB553870684_.jpg") no-repeat;
+height: 120px;
+width: 120px;
+margin-top: 20px;
+margin-left: 20px;
+}
+.container33
+{
+background: url("https://images-eu.ssl-images-amazon.com/images/G/31/img21/june/CE/GW/QC/PC/PC_QuadCard_Noise_0.5x._SY116_CB553870684_.jpg") no-repeat;
+height: 120px;
+width: 120px;
+margin-left: 20px;
+
+}
+.container34
+{
+background: url("https://images-eu.ssl-images-amazon.com/images/G/31/img21/june/CE/MSO/PD3/PC_QuadCard_Zeb_0.5x_1._SY116_CB570220221_.jpg") no-repeat;
+height: 120px;
+width: 120px;
+margin-left: 20px;
+
+}
+
 .container4
 {
-    background-color: cadetblue;
-    border: 1px solid white;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(2,1fr);
+    background-color: white;
+    border: 1px solid red;
+}
+.container41
+{
+background: url("https://images-eu.ssl-images-amazon.com/images/G/31/img18/HomeImprovement/harsmisc/2025/March/Wipes_low_res_V1._SY116_CB549138744_.jpg") no-repeat;
+height: 120px;
+width: 120px;
+margin-top: 20px;
+margin-left: 20px;
+}
+.container42
+{
+background: url("https://images-eu.ssl-images-amazon.com/images/G/31/img18/HomeImprovement/harsmisc/2025/March/Shower_heads_low_res_V1._SY116_CB549138744_.jpg") no-repeat;
+height: 120px;
+width: 120px;
+margin-top: 20px;
+margin-left: 20px;
+}
+.container43
+{
+background: url("https://images-eu.ssl-images-amazon.com/images/G/31/img18/HomeImprovement/harsmisc/2025/March/Tools_low_res_V1._SY116_CB549138744_.jpg") no-repeat;
+height: 120px;
+width: 120px;
+margin-left: 20px;
+
+}
+.container44
+{
+background: url("https://images-eu.ssl-images-amazon.com/images/G/31/img18/HomeImprovement/harsmisc/2025/March/Wallpapers_low_res_V1._SY116_CB549138744_.jpg") no-repeat;
+height: 120px;
+width: 120px;
+margin-left: 20px;
+
+}
+
+
+.footer{
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row-start: 4;
+    grid-row-end: 5;
+    background-color: black;
+    color: white;
 }

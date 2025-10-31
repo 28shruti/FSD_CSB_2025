@@ -1,0 +1,12 @@
+.parent{
+    border: 4px solid rgb(106, 194, 245);
+    height: 400px;
+    width: 450px;
+    background-color: rgb(25, 36, 129);
+}
+.profile-pic{
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}

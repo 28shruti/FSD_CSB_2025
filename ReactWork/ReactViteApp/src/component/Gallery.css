@@ -1,0 +1,6 @@
+.gallery{
+    display: flex;
+    gap: 20px;
+    justify-content: space-evenly;
+    text-align: left;
+}
