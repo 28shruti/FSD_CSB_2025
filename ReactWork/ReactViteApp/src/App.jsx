@@ -8,7 +8,15 @@ import StateHandling from './component/StateHandling.jsx';
 import ImageManipulation from './component/ImageManipulation.jsx';
 import {BrowserRouter, Route,Routes} from 'react-router-dom';
 import Login from './pages/Login.jsx';
+import Registration from './pages/Registration.jsx';
+import Dashboard from './pages/Dashboard.jsx';
+import MainLayout from './pages/MainLayout.jsx';
+
+
+
 function App() {
+  const[data,setData]=useState();
+
 
   return (
     <>
@@ -24,9 +32,17 @@ function App() {
 
           <BrowserRouter>
           <Routes>
-            <Route path='/login' element={<Login/>}></Route>
-            </Routes>
+            <Route path="/" element={<MainLayout />} />
+            <Route path='/login' element={<Login logData={data}/>}></Route>
+            <Route path='/register' element={<Registration regData={setData}/>}></Route>
+            <Route path='/dashboard' element={<Dashboard/>}></Route>
+            <Route path='/mainlayout' element={<MainLayout/>}></Route>
+          </Routes>
             </BrowserRouter>
+            <h2>
+              {JSON.stringify(data)}
+            </h2>
+          
       </div>
       
     </>

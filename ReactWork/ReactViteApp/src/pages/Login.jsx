@@ -1,24 +1,45 @@
 import React from 'react'
+import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
-function Login() {
+function Login({logData}) {
+  const[email,setEmail]=useState("");
+  const[password,setPassword]=useState("");
+
+  function verification(e){
+    e.preventDefault();
+    // console.log(logData.email);
+
+    // alert(email+ password);
+    
+    if(logData.email == email){
+      if(logData.password == password){
+        alert("Successfully Logged In and navigate to Dashboard");
+        naviagate('/dashboard');
+      }else{
+        alert("Incorrect Password");
+      }
+    }else{
+      alert("Email is not registered");
+    }
+  }
   return (
     <div>
         <h2>Login Form</h2>
         <form>
-  <div class="form-group">
-    <label for="exampleInputEmail1">Email address</label>
-    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"/>
-    {/* <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> */}
+  <div className="form-group">
+    <label htmlFor="exampleInputEmail1">Email address</label>
+    <input onChange={(e)=>setEmail(e.target.value)} type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"/>
   </div>
-  <div class="form-group">
-    <label for="exampleInputPassword1">Password</label>
-    <input type="password" class="form-control" id="exampleInputPassword1"/>
+  <div className="form-group">
+    <label htmlFor="exampleInputPassword1">Password</label>
+    <input onChange={(e)=>setPassword(e.target.value)} type="password" className="form-control" id="exampleInputPassword1"/>
   </div>
-  <div class="form-group form-check">
-    <input type="checkbox" class="form-check-input" id="exampleCheck1"/>
-    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+  <div className="form-group form-check">
+    <input type="checkbox" className="form-check-input" id="exampleCheck1"/>
+    <label className="form-check-label" htmlFor="exampleCheck1">Check me out</label>
   </div>
-  <button type="submit" class="btn btn-primary">Submit</button>
+  <button onClick={verification} type="submit" className="btn btn-primary">Submit</button>
 </form>
     </div>
   )
