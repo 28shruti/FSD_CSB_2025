@@ -54,7 +54,16 @@ function Registration({ setRegData }) {
     setRegData({ name, email, password });
     alert("Registered successfully");
   }
-
+function Registration({ regData }) {
+  async function getData(e) {
+    const server=await fetch("http://localhost:7878/register", {
+      method: "POST",
+      headers: {'Content-Type':'application/json'},
+      body: JSON.stringify(data)
+    });
+    const jsonresponse=await server.json();
+  }
+}
   return (
     <div>
       <h2>Registration</h2>
