@@ -1,7 +1,7 @@
 const http=require('http');
 const PORT=4004;
 const apidata=require('./apiCalling')
-const dataWrite=require('./usefsmodule')
+const {dataWrite,dataRead, deleteFile, readFileAsync}=require('./usefsmodule')
 const server=http.createServer(async (req,res)=>{
 
     res.setHeader('Access-Control-Allow-Origin', '*');
@@ -31,10 +31,43 @@ res.end(JSON.stringify({msg:jsondata}))
 
 }
 
-else if(req.url=="/datawrite" && req.method=="GET"){
+else if(req.url=="/dataread" && req.method=="GET"){
 res.setHeader("Content-Type","application/json");
-      const jsondata=dataWrite();
+      const jsondata=dataRead();
 res.end(JSON.stringify({msg:jsondata}))
+
+}
+else if(req.url=="/deletefile" && req.method=="GET"){
+res.setHeader("Content-Type","application/json");
+      const jsondata=deleteFile();
+res.end(JSON.stringify({msg:jsondata}))
+
+}
+
+else if(req.url=="/datareadasync" && req.method=="GET"){
+res.setHeader("Content-Type","application/json");
+      const jsondata=readFileAsync();
+res.end(JSON.stringify({msg:jsondata}))
+
+}
+
+else if(req.url=="/register" && req.method=="POST"){
+  let arr=[];
+  let body="";
+  req.on('data',chunk=>{
+    body+=chunk;
+  })
+
+  req.on('end',()=>{
+    const {name,email,password}=JSON.parse(body);
+    console.log(name)
+    res.setHeader("Content-Type","application/json");
+
+  res.end(JSON.stringify({msg:"hit the /register api",data:jsondata}))
+    
+  })
+
+
 
 }
 
