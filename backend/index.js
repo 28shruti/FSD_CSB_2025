@@ -34,41 +34,31 @@ res.end(JSON.stringify({msg:jsondata}))
 else if(req.url=="/dataread" && req.method=="GET"){
 res.setHeader("Content-Type","application/json");
       const jsondata=dataRead();
-res.end(JSON.stringify({msg:jsondata}))
-
+res.end(JSON.stringify({msg:jsondata}));
 }
 else if(req.url=="/deletefile" && req.method=="GET"){
 res.setHeader("Content-Type","application/json");
       const jsondata=deleteFile();
-res.end(JSON.stringify({msg:jsondata}))
-
-}
-
-else if(req.url=="/datareadasync" && req.method=="GET"){
-res.setHeader("Content-Type","application/json");
-      const jsondata=readFileAsync();
-res.end(JSON.stringify({msg:jsondata}))
-
+res.end(JSON.stringify({msg:jsondata}));
 }
 
 else if(req.url=="/register" && req.method=="POST"){
-  let arr=[];
-  let body="";
-  req.on('data',chunk=>{
+
+let arr=[];
+let body="";
+
+req.on('data',chunk=>{
     body+=chunk;
-  })
+})
 
-  req.on('end',()=>{
+req.on('end',()=>{
+      // console.log("Hiii")
     const {name,email,password}=JSON.parse(body);
-    console.log(name)
+    console.log(name+email+password)
     res.setHeader("Content-Type","application/json");
-
-  res.end(JSON.stringify({msg:"hit the /register api",data:jsondata}))
-    
-  })
-
-
-
+     
+res.end(JSON.stringify({msg:"student added successfully!!!"}))
+})
 }
 
 else{
@@ -82,3 +72,6 @@ res.setHeader("Content-Type","text/html");
 server.listen(PORT,()=>{
     console.log("Server is listening on "+PORT)
 })
+
+
+
